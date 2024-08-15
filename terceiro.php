@@ -7,14 +7,4 @@ $resp = 0;
 $resp = $num1+$num2;
 
 echo "A resposta é ".$resp;
-
-
-
-
-
-
-
-
-
-
  ?>
