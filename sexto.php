@@ -16,24 +16,33 @@ if ($resp >= $num1) {
 	echo "Resposta é menor que num1";
 }*/
 
+$desc1 = "Seu sálario bruto é R$$salario, se descontar do INSS é de "
+$desc2 = " e seu salário final fica R$$reajuste"
+
+
 
 
 if ($salario <= 1500) {
 	$reajuste = $salario;
-	echo "Ao descontar o INSS, fica R$$reajuste";
+	echo "$desc1 0% $desc2";
 
-} elseif ($salario >= 1501 || $salario <= 1600) {
+} elseif ($salario > 1500 || $salario <= 1600) {
 
 	$reajuste = $salario*0.9;
-	echo "Ao descontar o INSS, fica R$$reajuste";
-} elseif ($salario >= 1601 || $salario <= 2500) {
+	echo "$desc1 10% $desc2";
+ }elseif ($salario > 1600 || $salario <= 1800) {
+
+	$reajuste = $salario*0.9;
+	echo "$desc1 16,5% $desc2";
+
+} elseif ($salario > 1800 || $salario <= 2500) {
 
 	$reajuste = $salario*0.79;
-	echo "Ao descontar o INSS, fica R$$reajuste";
+	echo "$desc1 20% $desc2";
 
-} elseif ($salario >= 2501) {
+} else {
 	$reajuste = $salario*0.725;
-	echo "Ao descontar o INSS, fica R$$reajuste";
+	echo "$desc1 27,5% $desc2";
 }
 
 

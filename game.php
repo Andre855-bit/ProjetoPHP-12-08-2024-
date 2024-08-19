@@ -53,8 +53,6 @@ function rolarDados($expressao) {
     <button type="submit" name="atacar_jogador2">Jogador 2 Atacar</button>
 </form>*/
 
-<?php
-
 // Função para rolar dados
 function rolarDados($expressao) {
     $partes = preg_split('/([+-])/', $expressao, -1, PREG_SPLIT_DELIM_CAPTURE);
@@ -86,14 +84,16 @@ class Jogador {
     public $evasao;
     public $defesa;
     public $dano;
+    public $tipo;
 
-    public function __construct($nome, $vida, $forca, $evasao, $defesa, $dano) {
+    public function __construct($nome, $vida, $forca, $evasao, $defesa, $dano, $tipo) {
         $this->nome = $nome;
         $this->vida = $vida;
         $this->forca = $forca;
         $this->evasao = $evasao;
         $this->defesa = $defesa;
         $this->dano = $dano;
+        $this->tipo = $tipo;
     }
 
     public function atacar($alvo) {
@@ -116,8 +116,8 @@ class Jogador {
 }
 
 // Cria os jogadores
-$jogador1 = new Jogador("Jogador 1", 10, d6, d4, 2, 1);
-$jogador2 = new Jogador("Jogador 2", 10, d8, d8, 3, 1);
+$jogador1 = new Jogador("Jogador 1", 10, 6, 4, 2, 1, "player");
+$jogador2 = new Jogador("Jogador 2", 10, 8, 5, 3, 1, "player");
 
 // Verifica se um dos botões foi pressionado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
