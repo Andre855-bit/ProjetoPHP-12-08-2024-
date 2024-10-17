@@ -24,6 +24,8 @@
 				<input type="reset" name="limpar" value="Limpar" class="btn btn-danger">
 
 			</form>
+
+			<a href="<?php  ?>"> Não tem cadastro?</a>
 		</div>
 	</div>
 
