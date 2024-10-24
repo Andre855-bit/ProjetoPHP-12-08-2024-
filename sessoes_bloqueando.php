@@ -5,7 +5,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Bloqueando páginas por sessões</title>
 	<?php 
-date_default_timezone_set("America/Sao_Paulo");
+	
+	date_default_timezone_set("America/Sao_Paulo");
 	session_start();
 
 	$_SESSION['nome'] = $_POST['nome'];
